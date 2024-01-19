@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ivcare.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_patientDisplayFragment"
+            app:destination="@id/patientDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientDisplayFragment"
+        android:name="com.example.ivcare.patientsDisplay.PatientDisplayFragment"
+        android:label="fragment_patient_display"
+        tools:layout="@layout/fragment_patient_display" >
+        <action
+            android:id="@+id/action_patientDisplayFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_patientDisplayFragment_to_updatePatientFragment"
+            app:destination="@id/updatePatientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.ivcare.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updatePatientFragment"
+        android:name="com.example.ivcare.updatePatient.UpdatePatientFragment"
+        android:label="fragment_update_patient"
+        tools:layout="@layout/fragment_update_patient" >
+        <action
+            android:id="@+id/action_updatePatientFragment_to_patientDisplayFragment"
+            app:destination="@id/patientDisplayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment2"
+        android:name="com.example.ivcare.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/faqFragment2"
+        android:name="com.example.ivcare.FaqFragment"
+        android:label="fragment_faq"
+        tools:layout="@layout/fragment_faq" />
+    <fragment
+        android:id="@+id/userDisplayFragment"
+        android:name="com.example.ivcare.usersDisplay.UserDisplayFragment"
+        android:label="fragment_user_display"
+        tools:layout="@layout/fragment_user_display" />
+</navigation>

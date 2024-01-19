@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.ivcare.updatePatient.UpdatePatientFragment">
+
+
+    <data>
+        <variable
+            name="patient"
+            type="com.example.ivcare.patientDatabase.Patient" />
+
+        <variable
+            name="updatePatientViewModel"
+            type="com.example.ivcare.updatePatient.UpdatePatientViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/hello">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:text="Update Patient Data"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/updatePatientFirstNameLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/textbox_bg"
+            android:text="@{updatePatientViewModel.patient.patientFirstName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/updatePatientLastNameLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@drawable/textbox_bg"
+            android:text="@{updatePatientViewModel.patient.patientLastName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updatePatientFirstNameLine"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/updateIVPumpUnitNumLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/textbox_bg"
+            app:layout_constraintTop_toBottomOf="@+id/updatePatientLastNameLine"
+            app:patientIVPumpUnitNum="@{updatePatientViewModel.patient}"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/updateFlowRateLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/textbox_bg"
+            app:layout_constraintTop_toBottomOf="@+id/updateIVPumpUnitNumLine"
+            app:patientFlowRate="@{updatePatientViewModel.patient}"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/confirmUpdateBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Update"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/updateFlowRateLine" />
+
+        <TextView
+            android:id="@+id/updateToHomeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="221dp"
+            android:clickable="true"
+            android:onClick="@{() -> updatePatientViewModel.onClose()}"
+            android:text="Back to Home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmUpdateBtn"
+            tools:ignore="TouchTargetSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

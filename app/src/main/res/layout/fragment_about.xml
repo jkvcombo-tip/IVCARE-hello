@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.ivyapp.AboutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/logoAbout"
+            android:layout_width="171dp"
+            android:layout_height="152dp"
+            android:src="@drawable/logopic"
+            tools:layout_editor_absoluteX="120dp"
+            tools:layout_editor_absoluteY="61dp" />
+
+        <LinearLayout
+            android:layout_width="331dp"
+            android:layout_height="455dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="38dp"
+            tools:layout_editor_absoluteY="228dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="About the App"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="This is a sample application that was based on the idea of ''Design of a Flow Control System for Locally-developed, Single-channel Digital Infusion Pump with
+ Remote Monitoring of IV Fluids''. The design project that I was part of Project Design 1 of TEAM 15 SY 2022-2023. It contains CRUD functionality to manage patient records." />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Created By : "
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="15sp"
+                    android:text="Combo, John Kenneth" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Course: CPE 026 - Emerging Technologies 3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Section: CPE41S4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Instructor : "
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:text="Dr. Alonica Villanueva" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

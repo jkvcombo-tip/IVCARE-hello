@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IVCARE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtviewabout">About</string>
+    <string name="txtviewfaq">FAQ</string>
+    <string name="imgnavheaderlogo">imgnavheaderlogo</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+</resources>
