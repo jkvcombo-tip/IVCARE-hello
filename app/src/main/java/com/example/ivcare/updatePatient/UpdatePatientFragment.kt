@@ -15,6 +15,7 @@ import androidx.navigation.fragment.NavHostFragment
 
 import com.example.ivcare.R
 import com.example.ivcare.databinding.FragmentUpdatePatientBinding
+import com.example.ivcare.patientDatabase.Patient
 import com.example.ivcare.patientDatabase.PatientDatabase
 import com.example.ivcare.patientDatabase.PatientRepository
 
@@ -38,11 +39,11 @@ class UpdatePatientFragment : Fragment() {
         )
 
         val application = requireNotNull(this.activity).application
-        val arguments = UpdatePatientFragmentArgs.fromBundle(requireArguments())
+        val patientId = requireArguments().getInt("patient_id")
         val dao = PatientDatabase.getInstance(application).patientDao
         val repository = PatientRepository(dao)
-        val factory = UpdatePatientViewModelFactory(arguments.patient, repository)
-        updatePatientViewModel = ViewModelProvider(this, factory).get(UpdatePatientViewModel::class.java)
+        val factory = UpdatePatientViewModelFactory(patientId, repository)
+        updatePatientViewModel = ViewModelProvider(this, factory)[UpdatePatientViewModel::class.java]
 
         binding.updatePatientViewModel = updatePatientViewModel
 
